@@ -12,9 +12,31 @@
   <ItemGroup>
     <None Remove="Services\" />
     <None Remove="DTO\" />
+    <None Remove="UnitTests\obj\UnitTests.csproj.nuget.g.props" />
+    <None Remove="UnitTests\obj\UnitTests.csproj.nuget.g.targets" />
+    <None Remove="UnitTests\obj\project.nuget.cache" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.assets.cache" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.csproj.AssemblyReference.cache" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.GeneratedMSBuildEditorConfig.editorconfig" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.AssemblyInfoInputs.cache" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.csproj.FileListAbsolute.txt" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.csproj.CoreCompileInputs.cache" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.dll" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.pdb" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.csproj.CopyComplete" />
+    <None Remove="UnitTests\obj\Debug\net5.0\UnitTests.genruntimeconfig.cache" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Services\" />
     <Folder Include="DTO\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UnitTests\obj\Debug\net5.0\.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
+    <Compile Remove="UnitTests\obj\Debug\net5.0\UnitTests.AssemblyInfo.cs" />
+    <Compile Remove="UnitTests\UnitTest1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Remove="UnitTests\obj\project.assets.json" />
+    <Content Remove="UnitTests\obj\UnitTests.csproj.nuget.dgspec.json" />
   </ItemGroup>
 </Project>
