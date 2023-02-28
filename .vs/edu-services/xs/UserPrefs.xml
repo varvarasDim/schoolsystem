@@ -1,28 +1,28 @@
 ﻿<Properties StartupConfiguration="{B0DE4374-5EB0-4F13-B1C7-F9F8E8B4318C}|Default">
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Controllers/ApiController.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs">
     <Files>
-      <File FileName="Domain/Classroom.cs" Line="26" Column="21" />
-      <File FileName="README.md" Line="22" Column="95" />
+      <File FileName="Domain/Classroom.cs" />
+      <File FileName="README.md" />
       <File FileName="DTO/Person.cs" Line="1" Column="1" />
-      <File FileName="DTO/Roster.cs" Line="1" Column="1" />
+      <File FileName="DTO/Roster.cs" />
       <File FileName="Program.cs" />
       <File FileName="Startup.cs" />
-      <File FileName="obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" />
-      <File FileName="Services/SchoolService.cs" Line="19" Column="67" />
+      <File FileName="Services/SchoolService.cs" />
       <File FileName="Domain/Student.cs" />
       <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.EolTargetFrameworks.targets" />
-      <File FileName="Controllers/ApiController.cs" Line="46" Column="36" />
-      <File FileName="Services/ISchoolService.cs" Line="1" Column="1" />
+      <File FileName="Controllers/ApiController.cs" />
+      <File FileName="Services/ISchoolService.cs" />
+      <File FileName="edu-service.UnitTests/UnitTest1.cs" Line="1" Column="1" />
+      <File FileName="obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" Line="4" Column="12" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="edu-services" expanded="True">
+            <Node name="edu-service.UnitTests" expanded="True" />
             <Node name="edu-services" expanded="True">
-              <Node name="Controllers" expanded="True">
-                <Node name="ApiController.cs" selected="True" />
-              </Node>
+              <Node name="Controllers" expanded="True" />
               <Node name="Domain" expanded="True" />
               <Node name="DTO" expanded="True" />
               <Node name="Services" expanded="True" />
