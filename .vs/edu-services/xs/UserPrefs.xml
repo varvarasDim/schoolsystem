@@ -1,0 +1,39 @@
+﻿<Properties StartupConfiguration="{B0DE4374-5EB0-4F13-B1C7-F9F8E8B4318C}|Default">
+  <DisabledProjects>
+    <String>edu-services.UnitTests/edu-services.UnitTests.csproj</String>
+  </DisabledProjects>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/net5.0/edu-services.AssemblyInfo.cs">
+    <Files>
+      <File FileName="Domain/Classroom.cs" Line="23" Column="45" />
+      <File FileName="README.md" Line="22" Column="24" />
+      <File FileName="DTO/Person.cs" Line="1" Column="1" />
+      <File FileName="DTO/Roster.cs" Line="1" Column="1" />
+      <File FileName="Program.cs" Line="1" Column="1" />
+      <File FileName="Startup.cs" Line="1" Column="1" />
+      <File FileName="obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" Line="4" Column="12" />
+      <File FileName="obj/Debug/net5.0/edu-services.AssemblyInfo.cs" Line="13" Column="12" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="edu-services" expanded="True">
+            <Node name="edu-services" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Domain" expanded="True" />
+              <Node name="DTO" expanded="True" />
+              <Node name="Properties" expanded="True" />
+            </Node>
+            <Node name="edu-services.UnitTests" selected="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.ItemProperties.edu-services PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+</Properties>
