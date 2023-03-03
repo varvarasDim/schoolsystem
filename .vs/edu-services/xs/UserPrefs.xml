@@ -5,7 +5,7 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.ItemProperties.edu-services PreferredExecutionTarget="/System/Volumes/Preboot/Cryptexes/App/System/Applications/Safari.app" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="edu-service.UnitTests/UnitTest1.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs">
     <Files>
       <File FileName="Domain/Classroom.cs" />
       <File FileName="README.md" />
@@ -18,7 +18,6 @@
       <File FileName="../../../../../usr/local/share/dotnet/sdk/7.0.101/Sdks/Microsoft.NET.Sdk/targets/Microsoft.NET.EolTargetFrameworks.targets" />
       <File FileName="Controllers/ApiController.cs" />
       <File FileName="Services/ISchoolService.cs" />
-      <File FileName="edu-service.UnitTests/UnitTest1.cs" Line="28" Column="1" />
       <File FileName="obj/Debug/net5.0/.NETCoreApp,Version=v5.0.AssemblyAttributes.cs" Line="4" Column="12" />
     </Files>
     <Pads>

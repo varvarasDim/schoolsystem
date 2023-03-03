@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using edu_services.Domain;
 using edu_services.DTO;
+using edu_services.Mapper;
 
 namespace edu_services.Services
 {
@@ -16,29 +17,28 @@ namespace edu_services.Services
 		}
 
         //Method for adding the student to the classroom
-        public List<Student> AddStudentToClassroom(Person student)
+        public List<StudentDto> AddStudentToClassroom(StudentDto student)
         {
             _classroom.AddStudent(new Student(student.Firstname, student.Lastname));
-            return _classroom.Students;
+
+            List<StudentDto> studentDto = new List<StudentDto>();
+            foreach(var st in _classroom.Students)
+                studentDto.Add(Mapper.Mapper.TransformStudentToStudentDto(st));
+
+            return studentDto;
         }
 
         //Method for adding the teacher to the classroom
-        public Teacher AddTeacherToClassroom(Person teacher)
+        public TeacherDto AddTeacherToClassroom(TeacherDto teacher)
         {
             _classroom.AddTeacher(new Teacher(teacher.Firstname, teacher.Lastname));
-            return _classroom.Teacher;
+            return Mapper.Mapper.TransformTeacherToTeacherDto(_classroom.Teacher);
         }
 
         //This is for intenal usage to check if the classroom exists
-        public Classroom<Teacher, Student> GetClassroom()
+        public ClassroomDto GetClassroom()
         {
-            return _classroom;
-        }
-
-        //Returns the roster of the classroom
-        public (Teacher, List<Student>) GetRoster()
-        {
-            return _classroom.GetRoster();
+            return Mapper.Mapper.TransformClassroomToClassroomDto(_classroom);
         }
     }
 }

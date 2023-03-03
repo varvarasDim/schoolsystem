@@ -7,10 +7,9 @@ namespace edu_services.Services
 {
 	public interface ISchoolService
 	{
-		public Classroom<Teacher, Student> GetClassroom();
-        public (Teacher, List<Student>) GetRoster();
-        public Teacher AddTeacherToClassroom(Person teacher);
-        public List<Student> AddStudentToClassroom(Person student);
+		public ClassroomDto GetClassroom();
+        public TeacherDto AddTeacherToClassroom(TeacherDto teacher);
+        public List<StudentDto> AddStudentToClassroom(StudentDto student);
     }
 }
 

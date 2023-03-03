@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
-using edu_services.Domain;
 using edu_services.DTO;
+using edu_services.Request;
 using edu_services.Services;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
@@ -24,21 +24,20 @@ namespace edu_services.Controllers
 
         //Get the Roster for the specific classroom
         [HttpGet("/classroom/")]
-        public ActionResult<(String, String)> GetRoster()
+        public ActionResult<ClassroomDto> GetRoster()
         {
             _logger.LogInformation($"Getting the roster for the classroom");
 
-            //Check that the classroom exists
-            var classroom = _schoolService.GetClassroom();
-            if (classroom == null) 
-            {
-                return BadRequest("Classroom does not exist");
-            }
-
             try
             {
-                //Transform it to the the DTO Roster
-                return Ok(new Roster(_schoolService.GetRoster()));
+                //Check that the classroom exists
+                var classroom = _schoolService.GetClassroom();
+                if (classroom == null)
+                {
+                    return BadRequest("Classroom does not exist");
+                }
+
+                return Ok(classroom);
             }
             catch (Exception ex)
             {
@@ -50,20 +49,21 @@ namespace edu_services.Controllers
 
         //Add teacher in the classroom (Patch because a partial update is occuring)
         [HttpPatch("/classroom/teacher")]
-        public ActionResult<Teacher> AddTeacher ([FromBody] Person teacher)
+        public ActionResult<TeacherDto> AddTeacher ([FromBody] AddTeacher teacher)
         {
             _logger.LogInformation($"Adding teacher to classroom");
 
-            //Check that the classroom exists
-            var classroom = _schoolService.GetClassroom();
-            if (classroom == null)
-            {
-                return BadRequest("Classroom does not exist");
-            }
-
             try
             {
-                var teacherAdded = _schoolService.AddTeacherToClassroom(teacher);
+                //Check that the classroom exists
+                var classroom = _schoolService.GetClassroom();
+                if (classroom == null)
+                {
+                    return BadRequest("Classroom does not exist");
+                }
+
+                var teacherDto = new TeacherDto() { Firstname = teacher.Firstname, Lastname = teacher.Lastname };
+                var teacherAdded = _schoolService.AddTeacherToClassroom(teacherDto);
                 return Ok(teacherAdded);
             }
             catch (Exception ex)
@@ -75,25 +75,27 @@ namespace edu_services.Controllers
 
         //Add Students in the classroom (Patch because a partial update is occuring)
         [HttpPatch("/classroom/students")]
-        public ActionResult<List<Student>> AddStudents( [FromBody] List<Person> students)
+        public ActionResult<List<StudentDto>> AddStudents( [FromBody] List<AddStudent> students)
         {
             _logger.LogInformation($"Adding students to classroom");
 
-            //Check that the classroom exists
-            var classroom = _schoolService.GetClassroom();
-            if (classroom == null)
-            {
-                return BadRequest("Classroom does not exist");
-            }
-
             try
             {
-                foreach (var student in students)
+                //Check that the classroom exists
+                var classroomDto = _schoolService.GetClassroom();
+                if (classroomDto == null)
                 {
-                    _schoolService.AddStudentToClassroom(student);
+                    return BadRequest("Classroom does not exist");
                 }
 
-                return Ok(_schoolService.GetClassroom().Students);
+                foreach (var student in students)
+                {
+                    var studentDto = new StudentDto() { Firstname = student.Firstname, Lastname = student.Lastname};
+                    _schoolService.AddStudentToClassroom(studentDto);
+                }
+
+                var updatedClassroomDto = _schoolService.GetClassroom();
+                return Ok(updatedClassroomDto.Students);
             }
             catch (Exception ex)
             {

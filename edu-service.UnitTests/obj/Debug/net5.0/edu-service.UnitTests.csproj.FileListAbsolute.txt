@@ -110,8 +110,3 @@
 /Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/obj/Debug/net5.0/edu-service.UnitTests.pdb
 /Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/obj/Debug/net5.0/edu-service.UnitTests.genruntimeconfig.cache
 /Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/obj/Debug/net5.0/ref/edu-service.UnitTests.dll
-/Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/bin/Debug/net5.0/edu-service.UnitTests/bin/Debug/net5.0/appsettings.Development.json
-/Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/bin/Debug/net5.0/edu-service.UnitTests/bin/Debug/net5.0/appsettings.json
-/Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/bin/Debug/net5.0/edu-service.UnitTests/bin/Debug/net5.0/edu-services.deps.json
-/Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/bin/Debug/net5.0/edu-service.UnitTests/bin/Debug/net5.0/edu-services.runtimeconfig.dev.json
-/Users/a500177/Desktop/mytask/schoolsystem/edu-service.UnitTests/bin/Debug/net5.0/edu-service.UnitTests/bin/Debug/net5.0/edu-services.runtimeconfig.json
